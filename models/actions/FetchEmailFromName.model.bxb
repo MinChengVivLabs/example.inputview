@@ -1,0 +1,11 @@
+action (FetchEmailFromName) {
+  description (__DESCRIPTION__)
+  type (Fetch)
+  collect {
+    input (name) {
+      type (TypeName)
+      min (Required) max (One)
+    }
+  }
+  output (TypeTextEmail)
+}

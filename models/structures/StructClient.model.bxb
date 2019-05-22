@@ -1,0 +1,15 @@
+structure (StructClient) {
+  description (client has name, age, and email)
+  property (name) {
+    type (TypeName)
+    min (Required) max (One)
+  }
+  property (age) {
+    type (TypeIntAge)
+    min (Required) max (One)
+  }
+  property (email) {
+    type (TypeTextEmail)
+    min (Required) max (One)
+  }
+}

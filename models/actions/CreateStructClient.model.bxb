@@ -1,0 +1,26 @@
+action (CreateStructClient) {
+  description (__DESCRIPTION__)
+  type (Constructor)
+  collect {
+    input (name) {
+      type (TypeName)
+      min (Required) max (One)
+    }
+    input (age) {
+      type (TypeIntAge)
+      min (Required) max (One)
+    }
+    input (email) {
+      type (TypeTextEmail)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: FetchEmailFromName
+          value: $expr(name)
+        }
+      }
+      prompt-behavior (AlwaysElicitation)
+    }
+  }
+  output (StructClient)
+}

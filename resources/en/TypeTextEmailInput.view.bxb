@@ -1,0 +1,20 @@
+input-view {
+  match: TypeTextEmail(this)
+  render {
+    form {
+      elements {
+        text-input {
+          id (this)
+          type (TypeTextEmail)
+          label ("Email:")
+          max-length (50)
+          value ("#{value(this)}")
+        }
+      }
+      on-submit {
+        goal: TypeTextEmail
+        value: viv.core.FormElement(this)
+      }
+    }
+  }
+}

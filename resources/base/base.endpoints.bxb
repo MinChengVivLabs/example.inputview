@@ -1,0 +1,12 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (CreateStructClient) {
+      accepted-inputs (name, age, email)
+      local-endpoint ("CreateStructClient.js")
+    }
+    action-endpoint (FetchEmailFromName) {
+      accepted-inputs (name) 
+      local-endpoint ("FetchEmailFromName.js")
+    }
+  }
+}
